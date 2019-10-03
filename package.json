@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "justin-rassier-gatsby",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Gatsby site for justinrassier.com",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -14,11 +14,18 @@
   },
   "dependencies": {
     "gatsby": "^2.15.28",
+    "gatsby-plugin-postcss": "^2.1.10",
+    "gatsby-plugin-typescript": "^2.1.11",
+    "gatsby-remark-prismjs": "^3.3.17",
+    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-transformer-remark": "^2.6.27",
+    "prismjs": "^1.17.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "tailwindcss": "^1.1.2"
   },
   "repository": {
     "type": "git",
