@@ -15,6 +15,7 @@
   "dependencies": {
     "gatsby": "^2.15.28",
     "gatsby-plugin-postcss": "^2.1.10",
+    "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-typescript": "^2.1.11",
     "gatsby-remark-prismjs": "^3.3.17",
     "gatsby-source-filesystem": "^2.1.29",

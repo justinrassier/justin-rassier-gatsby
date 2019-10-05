@@ -74,7 +74,7 @@ export default ({ data }) => {
                 <div className="px-2 m-2" key={node.id}>
                   <Link className="font-semibold" to={node.fields.slug}>
                     {node.frontmatter.title}{" "}
-                    <span class="text-sm font-light text-gray-800">
+                    <span className="text-sm font-light text-gray-800">
                       — {node.frontmatter.date}
                     </span>
                   </Link>
