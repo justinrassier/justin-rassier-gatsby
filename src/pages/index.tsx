@@ -75,10 +75,15 @@ export default ({ data }) => {
                   <Link className="font-semibold" to={node.fields.slug}>
                     {node.frontmatter.title}{" "}
                     <span className="text-sm font-light text-gray-800">
-                      — {node.frontmatter.date}
+                      — {node.frontmatter.date}{" "}
+                      {/* {node.frontmatter.tags.map(tag => (
+                        <span className="bg-blue-800 text-gray-100 py-1 px-2 rounded-full">
+                          {tag}
+                        </span>
+                      ))} */}
                     </span>
                   </Link>
-                  <p class="ml-2">{node.excerpt}</p>
+                  <p className="ml-2">{node.excerpt}</p>
                 </div>
               ))}
             </div>
@@ -118,6 +123,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            tags
           }
           fields {
             slug

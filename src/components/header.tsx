@@ -1,10 +1,12 @@
 import React from "react"
+import pic from "../../static/images/justin.jpg"
 
 export const Header = props => (
   <div className="flex justify-between items-center bg-gray-800 text-gray-200 h-16">
     <div>
       <img
-        src="../images/justin.jpg"
+        // src="../images/justin.jpg"
+        src={pic}
         className="h-24 rounded-full absolute ml-4"
         alt="Justin Rassier"
       />

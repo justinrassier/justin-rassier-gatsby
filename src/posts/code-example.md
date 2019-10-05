@@ -6,6 +6,8 @@ tags: ["dev"]
 
 Here is an example of a Gatsby site using code higlighting and markdown. Pretty sweeeet
 
+![Awesome image](./justin.jpg)
+
 Need some CSS?
 
 ```css
