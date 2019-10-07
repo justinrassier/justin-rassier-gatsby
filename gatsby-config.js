@@ -5,11 +5,17 @@
  */
 
 module.exports = {
-  /* Your site config here */
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typescript`,
-    // `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -42,8 +48,6 @@ module.exports = {
                   },
                 },
               ],
-              // Customize the prompt used in shell output
-              // Values below are default
               prompt: {
                 user: "root",
                 host: "localhost",
@@ -54,14 +58,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
@@ -74,4 +70,4 @@ module.exports = {
       },
     },
   ],
-}
+};

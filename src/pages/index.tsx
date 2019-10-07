@@ -76,11 +76,11 @@ export default ({ data }) => {
                     {node.frontmatter.title}{" "}
                     <span className="text-sm font-light text-gray-800">
                       — {node.frontmatter.date}{" "}
-                      {/* {node.frontmatter.tags.map(tag => (
+                      {node.frontmatter.tags.map(tag => (
                         <span className="bg-blue-800 text-gray-100 py-1 px-2 rounded-full">
                           {tag}
                         </span>
-                      ))} */}
+                      ))}
                     </span>
                   </Link>
                   <p className="ml-2">{node.excerpt}</p>
