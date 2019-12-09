@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import { Header } from "../components/header";
 import { graphql } from "gatsby";
+import { Wrapper } from "../components/wrapper";
+import { PostItem } from "../components/post-item";
 
 export default ({ data }) => {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <Header></Header>
-      <div className="min-h-screen flex mt-16 mx-8">
-        <div className="w-1/4">
+      <div className="min-h-screen sm:flex mt-16 mx-8">
+        <div className="sm:w-1/3">
           <div className="flex items-center">
             <div className="bg-indigo-400 p-2 rounded-full">
               <svg
@@ -26,8 +28,9 @@ export default ({ data }) => {
             </div>
             <h2 className="font-semibold text-lg ml-2">About me</h2>
           </div>
+          <p className="px-2 mt-2">Here is some text about me and my life</p>
         </div>
-        <div className="w-1/4">
+        <div className="sm:w-1/3 mt-8 sm:mt-0">
           <div className="flex items-center">
             <div className="bg-indigo-400 p-2 rounded-full">
               <svg
@@ -46,7 +49,7 @@ export default ({ data }) => {
             <h2 className="font-semibold text-lg ml-2">Resume</h2>
           </div>
         </div>
-        <div className="w-1/4">
+        <div className="sm:w-1/3 mt-8 sm:mt-0">
           <div className="flex items-center flex-wrap">
             <div className="bg-indigo-400 p-2 rounded-full">
               <svg
@@ -71,41 +74,15 @@ export default ({ data }) => {
 
             <div className="flex flex-col">
               {data.allMarkdownRemark.edges.map(({ node }) => (
-                <div className="px-2 m-2" key={node.id}>
-                  <Link className="font-semibold" to={node.fields.slug}>
-                    {node.frontmatter.title}{" "}
-                    <span className="text-sm font-light text-gray-800">
-                      — {node.frontmatter.date}{" "}
-                      {node.frontmatter.tags.map(tag => (
-                        <span className="bg-blue-800 text-gray-100 py-1 px-2 rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </span>
-                  </Link>
-                  <p className="ml-2">{node.excerpt}</p>
-                </div>
+                <PostItem
+                  key={node.id}
+                  slug={node.fields.slug}
+                  date={node.frontmatter.date}
+                  title={node.frontmatter.title}
+                  excerpt={node.excerpt}
+                ></PostItem>
               ))}
             </div>
-          </div>
-        </div>
-        <div className="w-1/4">
-          <div className="flex items-center">
-            <div className="bg-indigo-400 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                className="inline-block h-6 w-6"
-              >
-                <path
-                  className="heroicon-ui"
-                  d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"
-                />
-              </svg>
-            </div>
-            <h2 className="font-semibold text-lg ml-2">Links</h2>
           </div>
         </div>
       </div>

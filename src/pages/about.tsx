@@ -1,6 +1,4 @@
 import React from "react";
-import pic from "../../static/images/justin.jpg";
+import { Wrapper } from "../components/wrapper";
 
-export default () => (
-  <img src={pic} className="h-32 rounded-full" alt="Justin Rassier" />
-);
+export default () => <Wrapper>What goes in here?</Wrapper>;

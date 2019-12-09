@@ -1,15 +1,15 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
+import { Wrapper } from "../components/wrapper";
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   return (
-    <div className="w-2/3 m-auto mt-4">
-      <h1 className="text-2xl">{post.frontmatter.title}</h1>
+    <Wrapper>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
-  )
-}
+    </Wrapper>
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,4 +20,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
