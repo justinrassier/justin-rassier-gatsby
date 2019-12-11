@@ -7,10 +7,9 @@ import { PostItem } from "../components/post-item";
 
 export default ({ data }) => {
   return (
-    <div className="bg-gray-100">
-      <Header></Header>
+    <Wrapper>
       <div className="min-h-screen sm:flex mt-16 mx-8">
-        <div className="sm:w-1/3">
+        <div className="sm:w-1/2">
           <div className="flex items-center">
             <div className="bg-indigo-400 p-2 rounded-full">
               <svg
@@ -20,36 +19,14 @@ export default ({ data }) => {
                 height="24"
                 className="inline-block h-6 w-6"
               >
-                <path
-                  className="heroicon-ui"
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0v-4a1 1 0 0 1 1-1zm0-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-                />
+                <path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9a1 1 0 0 1 1 1v4a1 1 0 0 1-2 0v-4a1 1 0 0 1 1-1zm0-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg>
             </div>
             <h2 className="font-semibold text-lg ml-2">About me</h2>
           </div>
-          <p className="px-2 mt-2">Here is some text about me and my life</p>
+          <p className="px-2 mt-2">My name is Justin Rassier. I like coding.</p>
         </div>
-        <div className="sm:w-1/3 mt-8 sm:mt-0">
-          <div className="flex items-center">
-            <div className="bg-indigo-400 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                className="inline-block h-6 w-6"
-              >
-                <path
-                  className="heroicon-ui"
-                  d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.42 1.4L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z"
-                />
-              </svg>
-            </div>
-            <h2 className="font-semibold text-lg ml-2">Resume</h2>
-          </div>
-        </div>
-        <div className="sm:w-1/3 mt-8 sm:mt-0">
+        <div className="sm:w-1/2 mt-8 sm:mt-0">
           <div className="flex items-center flex-wrap">
             <div className="bg-indigo-400 p-2 rounded-full">
               <svg
@@ -59,10 +36,7 @@ export default ({ data }) => {
                 height="24"
                 className="inline-block h-6 w-6"
               >
-                <path
-                  className="heroicon-ui"
-                  d="M6.3 12.3l10-10a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-10 10a1 1 0 0 1-.7.3H7a1 1 0 0 1-1-1v-4a1 1 0 0 1 .3-.7zM8 16h2.59l9-9L17 4.41l-9 9V16zm10-2a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h6a1 1 0 0 1 0 2H4v14h14v-6z"
-                />
+                <path d="M6.3 12.3l10-10a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-10 10a1 1 0 0 1-.7.3H7a1 1 0 0 1-1-1v-4a1 1 0 0 1 .3-.7zM8 16h2.59l9-9L17 4.41l-9 9V16zm10-2a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h6a1 1 0 0 1 0 2H4v14h14v-6z" />
               </svg>
             </div>
             <h2 className="font-semibold text-lg ml-2">
@@ -86,7 +60,7 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Wrapper } from "../components/wrapper";
+import { BlogWrapper } from "../components/blog-wrapper";
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <Wrapper>
+    <BlogWrapper>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </Wrapper>
+    </BlogWrapper>
   );
 };
 
