@@ -24,13 +24,13 @@ export default ({ data }) => {
             </div>
             <h2 className="font-semibold text-lg ml-2">About me</h2>
           </div>
-          <p className="px-2 mt-2">
+          <p className="px-2 mt-3 ml-4">
             My name is Justin Rassier. I like coding. Sometimes my wife thinks
             I'm funny.
           </p>
         </div>
         <div className="sm:w-1/2 mt-8 sm:mt-0">
-          <div className="flex items-center flex-wrap">
+          <div className="flex items-center">
             <div className="bg-indigo-400 p-2 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,15 +42,17 @@ export default ({ data }) => {
                 <path d="M6.3 12.3l10-10a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-10 10a1 1 0 0 1-.7.3H7a1 1 0 0 1-1-1v-4a1 1 0 0 1 .3-.7zM8 16h2.59l9-9L17 4.41l-9 9V16zm10-2a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h6a1 1 0 0 1 0 2H4v14h14v-6z" />
               </svg>
             </div>
-            <h2 className="font-semibold text-lg ml-2">
-              Blog{" "}
-              <span className="text-sm ml-1 text-gray-700">
-                ({data.allMarkdownRemark.totalCount} Posts)
-              </span>
-            </h2>
+            <h2 className="font-semibold text-lg ml-2">Blog</h2>
+          </div>
 
-            <div className="flex flex-col">
-              {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div className="flex flex-col">
+            {data.allMarkdownRemark.totalCount === 1 && (
+              <div className="mt-3 flex justify-center text-gray-700">
+                <span>Coming Soon...I hope.</span>
+              </div>
+            )}
+            {data.allMarkdownRemark.totalCount > 1 &&
+              data.allMarkdownRemark.edges.map(({ node }) => (
                 <PostItem
                   key={node.id}
                   slug={node.fields.slug}
@@ -59,7 +61,6 @@ export default ({ data }) => {
                   excerpt={node.excerpt}
                 ></PostItem>
               ))}
-            </div>
           </div>
         </div>
       </div>
@@ -77,7 +78,6 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
-            tags
           }
           fields {
             slug
