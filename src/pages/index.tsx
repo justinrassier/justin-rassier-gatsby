@@ -24,7 +24,10 @@ export default ({ data }) => {
             </div>
             <h2 className="font-semibold text-lg ml-2">About me</h2>
           </div>
-          <p className="px-2 mt-2">My name is Justin Rassier. I like coding.</p>
+          <p className="px-2 mt-2">
+            My name is Justin Rassier. I like coding. Sometimes my wife thinks
+            I'm funny.
+          </p>
         </div>
         <div className="sm:w-1/2 mt-8 sm:mt-0">
           <div className="flex items-center flex-wrap">
