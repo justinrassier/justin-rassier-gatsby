@@ -46,19 +46,20 @@ export default ({ data }) => {
           </div>
 
           <div className="flex flex-col">
-            {data.allMarkdownRemark.totalCount === 1 && (
+            {data.allMarkdownRemark.totalCount === 0 && (
               <div className="mt-3 flex justify-center text-gray-700">
                 <span>Coming Soon...I hope.</span>
               </div>
             )}
-            {data.allMarkdownRemark.totalCount > 1 &&
+            {data.allMarkdownRemark.totalCount > 0 &&
               data.allMarkdownRemark.edges.map(({ node }) => (
                 <PostItem
                   key={node.id}
                   slug={node.fields.slug}
                   date={node.frontmatter.date}
                   title={node.frontmatter.title}
-                  excerpt={node.excerpt}
+                  // The title looks redundant when part of the excerpt. Simple hack to remove it for now
+                  excerpt={node.excerpt.replace(node.frontmatter.title, "")}
                 ></PostItem>
               ))}
           </div>
