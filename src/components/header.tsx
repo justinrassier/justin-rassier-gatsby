@@ -8,7 +8,7 @@ export const Header = props => (
       <Link to="/">
         <img
           src={pic}
-          className="h-24 rounded-full absolute ml-4"
+          className="h-20 md:h-24 rounded-full absolute ml-4"
           alt="Justin Rassier"
         />
         <h1 className="text-2xl font-semibold tracking-wide inline-block ml-32">
