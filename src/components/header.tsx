@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
-const pic = require("../../static/images/justin.jpg");
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 export const Header = props => (
   <div className="flex justify-between items-center bg-gray-800 text-gray-200 h-16">
     <div>
       <Link to="/">
         <span className="sr-only">back to home</span>
-        <img
-          src={pic}
-          className="h-20 md:h-24 rounded-full absolute ml-4"
-          alt="Justin Rassier"
+        <Img
+          fixed={props.headerImage}
+          className="rounded-full absolute ml-4"
+          style={{ position: "absolute" }}
         />
         <h1 className="text-2xl font-semibold tracking-wide inline-block ml-32">
           Justin Rassier

@@ -1,3 +1,4 @@
+const path = require("path");
 /**
  * Configure your Gatsby site with this file.
  *
@@ -19,11 +20,20 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-catch-links`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     {
