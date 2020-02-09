@@ -8,25 +8,26 @@ html {
 @tailwind components;
 
 .post h1 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  @apply text-center mb-4 text-4xl;
 }
 
 /* Space between paragraphs */
 .post p {
-  margin-top: 1.5rem;
+  @apply mt-6;
+}
+
+.post strong {
+  @apply font-bold;
 }
 
 /* space between code blocks */
 .post .gatsby-highlight {
-  margin: 1.5rem 0;
+  @apply my-6;
 }
 
 /* link text */
 .post a {
-  color: #2b6cb0;
-  text-decoration: underline;
+  @apply text-blue-700 underline;
 }
 
 @tailwind utilities;

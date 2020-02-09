@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -7,7 +7,7 @@ export const PostItem = (props: {
   date: string;
   excerpt: string;
 }) => (
-  <div className="px-2 mt-3">
+  <div className="px-2 mt-4">
     <Link className="text-xl font-semibold" to={props.slug}>
       {props.title}
       <span className="text-sm font-light text-gray-800"> — {props.date} </span>
