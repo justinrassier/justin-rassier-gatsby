@@ -47,7 +47,7 @@ export default ({ data }) => {
 
           <div className="flex flex-col">
             {data.allMarkdownRemark.totalCount === 0 && (
-              <div className="mt-3 flex justify-center text-gray-700">
+              <div className="mt-4 flex justify-center text-gray-700">
                 <span>Coming Soon...I hope.</span>
               </div>
             )}
