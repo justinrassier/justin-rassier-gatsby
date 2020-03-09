@@ -11,6 +11,10 @@ html {
   @apply text-center mb-4 text-4xl;
 }
 
+.post h2 {
+  @apply text-center mt-4 mb-4 text-2xl;
+}
+
 /* Space between paragraphs */
 .post p {
   @apply mt-6;
