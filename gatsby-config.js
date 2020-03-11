@@ -22,6 +22,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: "UA-160272127-1",
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
