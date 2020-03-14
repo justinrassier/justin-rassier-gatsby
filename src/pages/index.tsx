@@ -4,10 +4,17 @@ import { Header } from "../components/header";
 import { graphql } from "gatsby";
 import { Wrapper } from "../components/wrapper";
 import { PostItem } from "../components/post-item";
+import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 export default ({ data }) => {
   return (
     <Wrapper>
+      {/* <Helmet>
+        <html lang="en" />
+        <title>The Homepage of Justin Rassier</title>
+      </Helmet> */}
+      <SEO></SEO>
       <div className="min-h-screen sm:flex mt-16 mx-8">
         <div className="sm:w-1/2">
           <div className="flex items-center">
