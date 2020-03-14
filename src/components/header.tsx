@@ -20,7 +20,11 @@ export const Header = props => (
     <div className="">
       <ul className="flex mr-4">
         <li className="px-2">
-          <a href="https://www.twitter.com/justinrassier" target="_blank">
+          <a
+            href="https://www.twitter.com/justinrassier"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="sr-only">Justin Rassier on Twitter</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +42,11 @@ export const Header = props => (
           </a>
         </li>
         <li className="px-2">
-          <a href="https://www.github.com/justinrassier" target="_blank">
+          <a
+            href="https://www.github.com/justinrassier"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="sr-only">Justin Rassier on Github</span>
             <svg
               width="24"
