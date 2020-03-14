@@ -1,9 +1,9 @@
 import React, { Children } from "react";
 import { Header } from "../components/header";
 
-export const Wrapper = ({ children }) => (
+export const Wrapper = props => (
   <div className="bg-gray-100">
-    <Header></Header>
-    <div>{children}</div>
+    <Header headerImage={props.headerImage}></Header>
+    <div>{props.children}</div>
   </div>
 );

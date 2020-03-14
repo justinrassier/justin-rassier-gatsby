@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
-import { Header } from "../components/header";
 import { graphql } from "gatsby";
 import { Wrapper } from "../components/wrapper";
 import { PostItem } from "../components/post-item";
@@ -9,11 +7,7 @@ import SEO from "../components/SEO";
 
 export default ({ data }) => {
   return (
-    <Wrapper>
-      {/* <Helmet>
-        <html lang="en" />
-        <title>The Homepage of Justin Rassier</title>
-      </Helmet> */}
+    <Wrapper headerImage={data.file.childImageSharp.fixed}>
       <SEO></SEO>
       <div className="min-h-screen sm:flex mt-16 mx-8">
         <div className="sm:w-1/2">
@@ -91,6 +85,15 @@ export const query = graphql`
             slug
           }
           excerpt
+        }
+      }
+    }
+    file(relativePath: { eq: "images/justin.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 80, height: 80) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
