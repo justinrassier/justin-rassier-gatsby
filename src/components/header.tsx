@@ -6,6 +6,7 @@ export const Header = props => (
   <div className="flex justify-between items-center bg-gray-800 text-gray-200 h-16">
     <div>
       <Link to="/">
+        <span className="sr-only">back to home</span>
         <img
           src={pic}
           className="h-20 md:h-24 rounded-full absolute ml-4"
@@ -20,6 +21,7 @@ export const Header = props => (
       <ul className="flex mr-4">
         <li className="px-2">
           <a href="https://www.twitter.com/justinrassier" target="_blank">
+            <span className="sr-only">Justin Rassier on Twitter</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 400 400"
@@ -37,6 +39,7 @@ export const Header = props => (
         </li>
         <li className="px-2">
           <a href="https://www.github.com/justinrassier" target="_blank">
+            <span className="sr-only">Justin Rassier on Github</span>
             <svg
               width="24"
               height="24"

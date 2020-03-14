@@ -5,6 +5,15 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "The Homepage of Justin Rassier",
+    titleTemplate: "",
+    description:
+      "The personal site, and home of the ramblings of Jutin Rassier",
+    url: "https://www.justinrassier.com", // No trailing slash allowed!
+    image: "/images/justin.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@justinrassier",
+  },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typescript`,
