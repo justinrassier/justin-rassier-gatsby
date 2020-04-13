@@ -7,7 +7,7 @@ export default () => {
     setOutput(numbers.join(","));
   };
   return (
-    <div className="">
+    <div className="flex flex-col justify-center h-screen">
       <div className="flex justify-center">
         <button
           className="bg-red-600 rounded text-gray-100 p-4"
